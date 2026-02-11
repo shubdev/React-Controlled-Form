@@ -1,0 +1,138 @@
+/* ── Page Layout ─────────────────────────────── */
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f4ff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+}
+
+/* ── Card ────────────────────────────────────── */
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px 36px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Heading ─────────────────────────────────── */
+.card h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e1e2f;
+    margin: 0 0 4px 0;
+}
+
+.card p {
+    font-size: 13px;
+    color: #888;
+    margin: 0 0 28px 0;
+}
+
+/* ── Live Preview Box ────────────────────────── */
+.live-preview {
+    background: #f5f7ff;
+    border: 1px solid #dde2ff;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 24px;
+}
+
+.live-preview-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #5c6bc0;
+    margin-bottom: 10px;
+}
+
+.live-preview-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.live-preview-row span:last-child {
+    color: #3d3d8f;
+    font-weight: 600;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── Field Group ─────────────────────────────── */
+.field-group {
+    margin-bottom: 18px;
+}
+
+.field-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+/* ── Input ───────────────────────────────────── */
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper span {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    pointer-events: none;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 11px 12px 11px 38px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #1e1e2f;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.input-wrapper input:focus {
+    border-color: #5c6bc0;
+    box-shadow: 0 0 0 3px rgba(92, 107, 192, 0.12);
+}
+
+/* ── Submit Button ───────────────────────────── */
+.submit-btn {
+    width: 100%;
+    padding: 13px;
+    background: #5c6bc0;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 6px;
+}
+
+.submit-btn:hover {
+    background: #3d4fa8;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}

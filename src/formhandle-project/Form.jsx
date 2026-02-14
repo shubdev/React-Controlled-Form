@@ -4,13 +4,16 @@ const Form = () => {
 
     const [formData, setformData] = useState({ name: "", email: "", age: "", gender: "", skills: [], experience: "", project: "", file: "", bio: "" });
     // console.log("formdata...", formData);
-
+    const [storeFormData, setstoreFormData] = useState(JSON.parse(localStorage.getItem("userCards")) || [])
 
     let handleFormSubmit = (e) => {
         e.preventDefault();
-        // console.log("onsubmit");
-
+        let arr = [...storeFormData, formData];
+        console.log("arr", arr);
+        setstoreFormData(arr);
+        localStorage.setItem("userCards", JSON.stringify(arr));
     }
+
     let handleOnchange = (e) => {
         console.log("click");
         const { name, value, type, files, checked } = e.target;  //distructuring 
@@ -100,7 +103,16 @@ const Form = () => {
                     {formData.project && <h5>Project:{formData.project}</h5>}
                     <h5>Bio:{formData.bio}</h5>
                 </div>
+
             </div>
+            {/* cards */}
+            {/* <div>
+                {
+                    storeFormData?.map((i) => {
+                        <p>{i.name}</p>
+                    })
+                }
+            </div> */}
         </>
     )
 }

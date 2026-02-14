@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const UncontrolledForm = () => {
 
     const [data, setData] = useState({ name: "", email: "", mobile: "" })
-    const [formData, setFormData] = useState(JSON.parse(localStorage.getItem("users")));
+    const [formData, setFormData] = useState(JSON.parse(localStorage.getItem("users")) || []);
     // console.log("data", data);
 
     let handleFormSubmit = (e) => {
